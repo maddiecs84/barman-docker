@@ -34,7 +34,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-         images: ubcctlt/barman
+         images: ${{ secrets.DOCKER_HUB_USERNAME }}/barman
          # generate Docker tags based on the following events/attributes
          tags: |
            type=schedule
